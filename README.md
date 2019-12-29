@@ -1,2 +1,2 @@
 # ViperMoviesssDB
-Viper and Mongo DB studies using movie thematics
+MoviesDB app developed using VIPER architecture.
