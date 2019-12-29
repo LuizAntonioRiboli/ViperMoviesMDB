@@ -35,12 +35,14 @@ protocol NowPlayingPresenterProtocol {
     var movies: [GlobalMovie]? {get set}
     
     func viewDidLoad()
+    func showMovieDetails(with movie: GlobalMovie?, from view: UIViewController)
    
 }
 
 //MARK: Router (aka: Wireframe) -
 /// NowPlaying Module Router Protocol
 protocol NowPlayingRouterProtocol {
-    // Show Details of Entity Object coming from ParentView Controller.
-    // func showDetailsFor(object: NowPlayingEntity, parentViewController viewController: UIViewController)
+
+    //Presenter -> Wireframe
+    func showMovieDetails(with movie: GlobalMovie?, from view: UIViewController)
 }

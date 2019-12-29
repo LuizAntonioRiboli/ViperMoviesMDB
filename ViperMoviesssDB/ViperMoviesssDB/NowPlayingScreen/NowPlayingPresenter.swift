@@ -10,9 +10,7 @@ import UIKit
 
 /// NowPlaying Module Presenter
 class NowPlayingPresenter: NowPlayingPresenterProtocol {
-    
-    
-    
+
     var view: NowPlayingViewProtocol?
     var interactor: NowPlayingInteractorProtocol?
     var wireframe: NowPlayingRouterProtocol?
@@ -20,5 +18,9 @@ class NowPlayingPresenter: NowPlayingPresenterProtocol {
     
     func viewDidLoad() {
         view?.showNowPlayingMovies(with: movies)
+    }
+    
+    func showMovieDetails(with movie: GlobalMovie?, from view: UIViewController) {
+        wireframe?.showMovieDetails(with: movie, from: view)
     }
 }

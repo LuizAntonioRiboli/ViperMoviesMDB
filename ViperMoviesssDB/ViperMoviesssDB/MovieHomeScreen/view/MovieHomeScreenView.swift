@@ -186,12 +186,8 @@ extension MovieHomeScreenView : UITableViewDelegate,
                 if let imageData = popularMovies?[indexPath.row].albumImage{
                     cell.albumImage.image = UIImage(data: imageData)
                 }
-                
-              
-                
                 return cell
             }
-            
         }
     }
     
@@ -216,7 +212,6 @@ extension MovieHomeScreenView : UITableViewDelegate,
                 return nil
             }
         }
-    
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -227,8 +222,6 @@ extension MovieHomeScreenView : UITableViewDelegate,
       
         presenter?.showMovieDetails(with: popularMovies?[indexPath.row], from: self)
     }
-    
-    
 }
 
 extension MovieHomeScreenView: NowPlayingCollectionViewCellDelegate{
@@ -236,7 +229,6 @@ extension MovieHomeScreenView: NowPlayingCollectionViewCellDelegate{
 
         presenter?.showMovieDetails(with: nowPlayingMovies?[indexPath.row], from: self)
     }
-
 }
 
 extension MovieHomeScreenView : UISearchBarDelegate{
@@ -251,7 +243,6 @@ extension MovieHomeScreenView : UISearchBarDelegate{
             self.tableView.reloadInputViews()
             self.tableView.reloadData()
         }
-        
     }
     
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
@@ -269,6 +260,5 @@ extension MovieHomeScreenView : UISearchBarDelegate{
             self.tableView.reloadData()
         }
     }
-   
 }
 

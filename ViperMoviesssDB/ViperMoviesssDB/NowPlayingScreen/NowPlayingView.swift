@@ -68,6 +68,10 @@ UICollectionViewDataSource{
         }
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        presenter?.showMovieDetails(with: movies?[indexPath.row], from: self)
+    }
 }
 
 extension NowPlayingView: UICollectionViewDelegateFlowLayout{
