@@ -50,9 +50,14 @@ class MovieHomeScreenView: UIViewController {
         let popularMoviesNib = UINib(nibName: "PopularMoviesTableViewCell", bundle: nil)
         self.tableView.register(popularMoviesNib, forCellReuseIdentifier: "PopularMoviesTableViewCell")
         
-        //Section header for Now Playing section
+        //Section headers
         let nowPlayingHeaderNib = UINib.init(nibName: "NowPlayingHeader", bundle: Bundle.main)
+        let popularMoviesHeaderNib = UINib.init(nibName: "PopularMoviesHeader", bundle: nil)
+        
+        
+        // Registering header footers
         self.tableView.register(nowPlayingHeaderNib, forHeaderFooterViewReuseIdentifier: "nowPlayingHeaderID")
+        self.tableView.register(popularMoviesHeaderNib, forHeaderFooterViewReuseIdentifier: "popularMoviesHeaderID")
         
         self.tableView.delegate = self
         self.tableView.dataSource = self
@@ -202,11 +207,16 @@ extension MovieHomeScreenView : UITableViewDelegate,
                 headerView.seeAllButton.addTarget(self, action:#selector(self.seeAllButtonClicked), for: .touchUpInside)
            
                 return headerView
-            }else {
+            }
+            if section == 1 {
+                let popularMoviesHeaderView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "popularMoviesHeaderID") as! PopularMoviesHeader
+                return popularMoviesHeaderView
+            }
+            else {
                 return nil
             }
         }
-        
+    
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
