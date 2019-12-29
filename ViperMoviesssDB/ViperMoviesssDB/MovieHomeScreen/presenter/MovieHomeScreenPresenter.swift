@@ -18,8 +18,8 @@ class MovieHomeScreenPresenter: MovieHomeScreenPresenterProtocol{
     func viewDidLoad() {
         print("viewDidLoad()")
  
-        interactor?.getPlayingNowMovies()
-        interactor?.getPopularMovies()
+        interactor?.fetchPlayingNowMovies(page: 1)
+        interactor?.fetchPopularMovies(page: 1)
     }
     
     func showMovieDetails(with movie: GlobalMovie?, from view: UIViewController) {

@@ -23,8 +23,8 @@ protocol MovieHomeScreenInputInteractorProtocol: class {
     var presenter: MovieHomeScreenOutputInteractorProtocol? {get set}
     
     //Presenter -> Interactor
-    func getPlayingNowMovies()
-    func getPopularMovies()
+    func fetchPlayingNowMovies(page:Int)
+    func fetchPopularMovies(page: Int)
     
 }
 

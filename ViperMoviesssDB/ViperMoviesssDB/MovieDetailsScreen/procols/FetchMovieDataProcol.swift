@@ -10,6 +10,4 @@ import Foundation
 
 protocol FetchMovieDataProtocol {
     
-    func fetchMovieData (movieId: String)
-    
 }
