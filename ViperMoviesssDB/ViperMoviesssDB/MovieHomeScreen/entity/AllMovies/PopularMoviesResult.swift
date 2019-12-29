@@ -8,15 +8,24 @@
 
 import Foundation
 
-struct PopularMoviesResult: Codable {
+struct PopularMoviesResult: Decodable {
     let page, totalResults, totalPages: Int
-    let results: [Result]
+    let movies: [Movie]
     
     enum CodingKeys: String, CodingKey {
         case page
         case totalResults = "total_results"
         case totalPages = "total_pages"
-        case results
+        case movies = "results"
+    }
+    
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        
+        page = try container.decode(Int.self, forKey: .page)
+        totalResults = try container.decode(Int.self, forKey: .totalResults)
+        totalPages = try container.decode(Int.self, forKey: .totalPages)
+        movies = try container.decode([Movie].self, forKey: .movies)
     }
 }
 

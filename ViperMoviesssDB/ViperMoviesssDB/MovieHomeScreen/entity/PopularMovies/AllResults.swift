@@ -9,7 +9,7 @@
 import Foundation
 
 struct AllResults: Codable {
-    let results: [Result]
+    let results: [Movie]
     let page, totalResults: Int
     let dates: Dates
     let totalPages: Int
