@@ -1,0 +1,6 @@
+framework module Pods_ViperMoviesssDB_ViperMoviesssDBUITests {
+  umbrella header "Pods-ViperMoviesssDB-ViperMoviesssDBUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
