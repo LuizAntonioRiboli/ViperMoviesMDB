@@ -10,8 +10,7 @@ import Foundation
 
 protocol MovieDbNetworkProtocol {
     
-    
     func getPopularMovies(page: Int, completion: @escaping (Result<[Movie],Error>) -> Void)
-    
     func getPlayingNowMovies(page: Int, completion: @escaping (Result<[Movie],Error>) -> Void)
+    
 }

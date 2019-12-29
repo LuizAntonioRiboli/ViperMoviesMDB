@@ -12,7 +12,7 @@ import Moya
 enum MovieApi {
     
     static private let apiKey = "e7874dc70ec5827126c27e68c1c85962"
-    //https://api.themoviedb.org/3/movie
+
     case popular(page:Int)
     case nowPlaying(page:Int)
 }
@@ -31,6 +31,7 @@ extension MovieApi: TargetType {
             return "now_playing"
         case .popular:
             return "popular"
+        
         }
     }
     
@@ -52,7 +53,6 @@ extension MovieApi: TargetType {
             
             let request = Task.requestParameters(parameters: param, encoding: parameterEncoding)
             
-            print(request)
             return request
         }
     }
@@ -74,6 +74,7 @@ extension MovieApi {
             return ["page":page,
                     "api_key": MovieApi.apiKey,
                     "language": "en-US"]
+           
         }
     }
     

@@ -10,7 +10,7 @@ import Foundation
 import Moya
 
 struct MovieDbNetworkManager: MovieDbNetworkProtocol {
-
+    
     let provider = MoyaProvider<MovieApi>()
     
     func getPopularMovies(page: Int, completion: @escaping (Result<[Movie], Error>) -> Void) {
@@ -50,6 +50,4 @@ struct MovieDbNetworkManager: MovieDbNetworkProtocol {
             }
         }
     }
-    
-    
 }
