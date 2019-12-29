@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="c1J-Ps-XOT" customClass="PopularMoviesHeader" customModule="ViperMoviesssDB" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="416" height="64"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HCA-JC-WLC">
+                    <rect key="frame" x="0.0" y="0.0" width="416" height="64"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Popular Movies" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o4h-Di-axn">
+                            <rect key="frame" x="15" y="22" width="122.5" height="20"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="o4h-Di-axn" firstAttribute="leading" secondItem="HCA-JC-WLC" secondAttribute="leading" constant="15" id="AZR-8E-fhu"/>
+                        <constraint firstAttribute="bottom" secondItem="o4h-Di-axn" secondAttribute="bottom" constant="22" id="K1D-Kq-bUC"/>
+                        <constraint firstItem="o4h-Di-axn" firstAttribute="top" secondItem="HCA-JC-WLC" secondAttribute="top" constant="22" id="xZf-OD-NJf"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="HCA-JC-WLC" firstAttribute="leading" secondItem="37O-ug-yQh" secondAttribute="leading" id="8Xb-Sz-58A"/>
+                <constraint firstAttribute="bottom" secondItem="HCA-JC-WLC" secondAttribute="bottom" id="8aP-hb-fzk"/>
+                <constraint firstItem="HCA-JC-WLC" firstAttribute="top" secondItem="c1J-Ps-XOT" secondAttribute="top" id="HGb-dA-bFE"/>
+                <constraint firstItem="HCA-JC-WLC" firstAttribute="leading" secondItem="37O-ug-yQh" secondAttribute="leading" id="khU-ht-2hf"/>
+                <constraint firstAttribute="bottom" secondItem="HCA-JC-WLC" secondAttribute="bottom" id="nJt-Uy-CYp"/>
+                <constraint firstItem="HCA-JC-WLC" firstAttribute="top" secondItem="c1J-Ps-XOT" secondAttribute="top" id="oNg-nZ-f3J"/>
+                <constraint firstItem="37O-ug-yQh" firstAttribute="trailing" secondItem="HCA-JC-WLC" secondAttribute="trailing" id="tSv-Ui-MHa"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="37O-ug-yQh"/>
+            <point key="canvasLocation" x="-1298.5507246376812" y="-383.70535714285711"/>
+        </view>
+    </objects>
+</document>
