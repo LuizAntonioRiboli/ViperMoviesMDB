@@ -42,7 +42,8 @@ class MovieHomeScreenInteractor:  MovieHomeScreenInputInteractorProtocol{
                     self.presenter?.nowPlayingMoviesDidFetch(movies: globalMovies)
                 }
                 
-            case .failure(let error): print(error)
+            case .failure(let error):
+                print(error)
             }
         }    
     }

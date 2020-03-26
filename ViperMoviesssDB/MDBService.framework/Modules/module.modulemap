@@ -1,0 +1,6 @@
+framework module MDBService {
+  umbrella header "MDBService.h"
+
+  export *
+  module * { export * }
+}

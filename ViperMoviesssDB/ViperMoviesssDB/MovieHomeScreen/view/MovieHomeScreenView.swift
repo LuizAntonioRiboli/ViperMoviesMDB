@@ -90,6 +90,7 @@ extension MovieHomeScreenView: MovieHomeScreenViewProtocol {
     
     func showPopularMovies(with movies: [GlobalMovie]?){
         popularMovies = movies
+        
         DispatchQueue.main.async {
             self.tableView.reloadInputViews()
             self.tableView.reloadData()
