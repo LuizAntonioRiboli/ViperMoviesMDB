@@ -23,7 +23,6 @@ struct MovieDbNetworkManager: MovieDbNetworkProtocol {
             
             if (popularMovies.count > 0) {
                 for case let movie as MDBService.Movie in popularMovies {
-                    print(movie.title)
                     movies.append(Movie(voteCount: Int(truncating: movie.voteAverage),
                                         id: 0,
                                         video: false,
@@ -48,35 +47,38 @@ struct MovieDbNetworkManager: MovieDbNetworkProtocol {
         
     }
     
+    
+    
     // Fetch Now Playing Movies using framework made in Obj-C
     func getPlayingNowMovies(page: Int, completion: @escaping (Result<[Movie], Error>) -> Void) {
         
         MDBNowPlayingMoviesService.sharedInstance().fetchNowPlayingMovies { nowPlayingMovies, error in
             
-            var movies = [Movie]()
-            
-            if (nowPlayingMovies.count > 0) {
-                for case let movie as MDBService.Movie in nowPlayingMovies{
-                    print(movie.title)
-                    movies.append(Movie(voteCount: Int(truncating: movie.voteAverage),
-                                        id: 0,
-                                        video: false,
-                                        voteAverage: Double(truncating: movie.voteAverage),
-                                        title: movie.title,
-                                        popularity: 0,
-                                        posterPath: movie.posterPath,
-                                        originalLanguage: "",
-                                        originalTitle: movie.originalTitle,
-                                        genreIDS: movie.genreIDS as! [Int],
-                                        backdropPath: "",
-                                        adult: false,
-                                        overview: movie.overview,
-                                        releaseDate: ""))
-                }
-                
-                completion(.success(movies))
-            } else {
+            if let error = error {
                 completion(.failure(error))
+            } else {
+                
+                var movies = [Movie]()
+                
+                if (nowPlayingMovies.count > 0) {
+                    for case let movie as MDBService.Movie in nowPlayingMovies{
+                        movies.append(Movie(voteCount: Int(truncating: movie.voteAverage),
+                                            id: 0,
+                                            video: false,
+                                            voteAverage: Double(truncating: movie.voteAverage),
+                                            title: movie.title,
+                                            popularity: 0,
+                                            posterPath: movie.posterPath,
+                                            originalLanguage: "",
+                                            originalTitle: movie.originalTitle,
+                                            genreIDS: movie.genreIDS as! [Int],
+                                            backdropPath: "",
+                                            adult: false,
+                                            overview: movie.overview,
+                                            releaseDate: ""))
+                    }
+                    completion(.success(movies))
+                }
             }
         }
     }

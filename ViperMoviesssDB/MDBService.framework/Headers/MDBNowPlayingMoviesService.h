@@ -9,12 +9,11 @@
 #import <Foundation/Foundation.h>
 #import "Movie.h"
 
-NS_ASSUME_NONNULL_BEGIN
 
 @interface MDBNowPlayingMoviesService: NSObject
-+(MDBNowPlayingMoviesService *) sharedInstance;
++(MDBNowPlayingMoviesService *_Nonnull) sharedInstance;
 
--(void) fetchNowPlayingMovies:(void(^)(NSMutableArray<Movie *> *moviesArray, NSError *error)) completionBlock;
+-(void) fetchNowPlayingMovies:(void(^_Nonnull)(NSMutableArray<Movie *> * _Nonnull moviesArray, NSError * _Nullable error)) completionBlock;
 @end
 
-NS_ASSUME_NONNULL_END
+

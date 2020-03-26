@@ -4,6 +4,10 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>Fixes</key>
+		<data>
+		LQ5y6QQGy8cfUSBlIyuZdgoeKGw=
+		</data>
 		<key>Headers/Genre.h</key>
 		<data>
 		KU7+gDm/+Zc5RsS8qclSx1RI3fE=
@@ -18,7 +22,7 @@
 		</data>
 		<key>Headers/MDBNowPlayingMoviesService.h</key>
 		<data>
-		XoItHOyX2agU70IJRKcY09JYlm0=
+		h7Tmzgx3NxiH76kQKdaljkbQHQo=
 		</data>
 		<key>Headers/MDBPopularMoviesService.h</key>
 		<data>
@@ -47,6 +51,13 @@
 	</dict>
 	<key>files2</key>
 	<dict>
+		<key>Fixes</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			jbomixsunD8lRDy5YGe+26nMMo5bZTEwRok+FsV9XRM=
+			</data>
+		</dict>
 		<key>Headers/Genre.h</key>
 		<dict>
 			<key>hash2</key>
@@ -72,7 +83,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			B5f3hmbIvxxD1tFR+/cvV4xvzTe85ZX2qUODv3QfsBY=
+			StSIpy+isiYhMzT8ranPVpW2uu+7HkhRAy2GrWZdNN0=
 			</data>
 		</dict>
 		<key>Headers/MDBPopularMoviesService.h</key>
